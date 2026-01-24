@@ -6,7 +6,7 @@
 /*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 17:34:31 by martrod2          #+#    #+#             */
-/*   Updated: 2026/01/23 18:25:44 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/01/24 19:36:59 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,30 @@ int	ft_isalnum(int c)
 	return(0);
 }
 
+/*
 #include <stdio.h>
+#include <ctype.h>
 
 int	main(void)
 {
-	int testChar = 'a';
+	int testChar = 'r';
 
 	printf("%d \n", ft_isalnum(testChar));
+	printf("%d \n", isalnum(testChar));
+
+	testChar = 'J';
+
+	printf("%d \n", ft_isalnum(testChar));
+	printf("%d \n", isalnum(testChar));
 
 	testChar = '8';
 
 	printf("%d \n", ft_isalnum(testChar));
+	printf("%d \n", isalnum(testChar));
 
 	testChar = '.';
 
 	printf("%d \n", ft_isalnum(testChar));
+	printf("%d \n", isalnum(testChar));
 }
+/*
