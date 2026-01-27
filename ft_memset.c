@@ -6,34 +6,42 @@
 /*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 19:14:20 by martrod2          #+#    #+#             */
-/*   Updated: 2026/01/26 20:12:57 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/01/27 20:56:45 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int i;
+	size_t i;
+	unsigned char *s2;
 	
 	i = 0;
+	s2 = (unsigned char *)s;
 	while (i < n)
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
+		s2[i] = (unsigned char)c;
 		i++;
 	}
 	return (s);
 }
 
 #include <stdio.h>
+#include <string.h>
 #include <stddef.h>
 
 int	main(void)
 {
-	char *aquiMismo;
-	int contenido = 42;
-	size_t longitud = 10;
+	char aquiMismo[] = "0123456789";
+	char aquiMismo2[] = "0123456789";
+	int contenido = '*';
+	size_t longitud = 8;
 
-	//cómo invoco una función que empieza por dereferencia
-	printf("%s", ft_memset(aquimismo, contenido, longitud));
+	printf("%s\n", aquiMismo);
+	memset(aquiMismo, contenido, longitud);
+	printf("%s\n", aquiMismo);
+	ft_memset(aquiMismo2, contenido, longitud);
+	printf("%s", aquiMismo2);
 }
