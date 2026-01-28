@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/26 19:14:20 by martrod2          #+#    #+#             */
-/*   Updated: 2026/01/28 17:06:12 by martrod2         ###   ########.fr       */
+/*   Created: 2026/01/28 15:19:22 by martrod2          #+#    #+#             */
+/*   Updated: 2026/01/28 17:18:46 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
 #include <stddef.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t			i;
 	unsigned char	*s2;
@@ -22,10 +21,9 @@ void	*ft_memset(void *s, int c, size_t n)
 	s2 = (unsigned char *)s;
 	while (i < n)
 	{
-		s2[i] = (unsigned char)c;
+		s2[i] = (unsigned char)0;
 		i++;
 	}
-	return (s);
 }
 
 /* #include <stdio.h>
@@ -33,14 +31,13 @@ void	*ft_memset(void *s, int c, size_t n)
 
 int	main(void)
 {
-	char aquiMismo[] = "0123456789";
-	char aquiMismo2[] = "0123456789";
-	int contenido = '*';
-	size_t longitud = 8;
+	char frase[] = "0123456789";
+	char frase2[] = "0123456789";
+	size_t iteraciones = 2;
 
-	printf("%s\n", aquiMismo);
-	memset(aquiMismo, contenido, longitud);
-	printf("%s\n", aquiMismo);
-	ft_memset(aquiMismo2, contenido, longitud);
-	printf("%s\n", aquiMismo2);
+	printf("%s\n", frase);
+	bzero(frase, iteraciones);
+	ft_bzero(frase2, iteraciones);
+	printf("%s\n", frase);
+	printf("%s\n", frase2);
 } */
