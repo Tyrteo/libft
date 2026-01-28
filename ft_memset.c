@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 19:14:20 by martrod2          #+#    #+#             */
-/*   Updated: 2026/01/27 20:56:45 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/01/28 13:19:35 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t i;
-	unsigned char *s2;
-	
+	size_t			i;
+	unsigned char	*s2;
+
 	i = 0;
 	s2 = (unsigned char *)s;
 	while (i < n)
@@ -28,7 +28,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
 #include <stddef.h>
 
@@ -43,5 +43,5 @@ int	main(void)
 	memset(aquiMismo, contenido, longitud);
 	printf("%s\n", aquiMismo);
 	ft_memset(aquiMismo2, contenido, longitud);
-	printf("%s", aquiMismo2);
-}
+	printf("%s\n", aquiMismo2);
+} */
