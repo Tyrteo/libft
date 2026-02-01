@@ -28,7 +28,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -38,16 +38,10 @@ int	main(void)
 	char	target2[11] = "oooooooooo";
 	char	mySource[11] = "xxxxxxxxxx";
 
-	/* 	while (*target1 != '/0')
-		{
-			write(1, &target1, 1);
-			*target1++;
-		} */
 	printf("target1 = %s\n", target1);
 	memcpy(target2, mySource, 5);
 	ft_memcpy(target1, mySource, 5);
 	printf("target1 (after ft_memcpy) = %s\n", target1);
 	printf("target2 (after ft_memcpy) = %s\n", target2);
 }
-
-char	*a = malloc(sizeof(char) * 11);
+		*/
