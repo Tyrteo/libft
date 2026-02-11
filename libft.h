@@ -6,7 +6,7 @@
 /*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 17:49:10 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/10 19:41:42 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/11 17:17:18 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
