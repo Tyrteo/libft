@@ -6,7 +6,7 @@
 /*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 20:29:57 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/14 20:55:03 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/14 22:02:44 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstnew(void *content)
 	nod->next = NULL;
 	return (nod);
 }
-#include <stdio.h>
+/* #include <stdio.h>
 
 int	main(void)
 {
@@ -36,4 +36,4 @@ int	main(void)
 	printf("Dir siguiente: %p\n", testnode->next);
 
 	free(testnode);
-}
+} */
