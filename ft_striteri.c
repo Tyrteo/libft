@@ -6,13 +6,13 @@
 /*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 16:43:50 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/14 16:57:21 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/14 17:06:24 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_stiteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
@@ -42,11 +42,11 @@ int	main(void)
 	// y daría un error al intentar modificarlo. Usamos un array de char [].
 	char s[] = "abcdefghijk";
 
-	printf("Antes de stiteri:   %s\n", s);
+	printf("Antes de striteri:   %s\n", s);
 
-	ft_stiteri(s, caesar_upper);
+	ft_striteri(s, caesar_upper);
 
-	printf("Después de stiteri: %s\n", s);
+	printf("Después de striteri: %s\n", s);
 
 	return (0);
 } */
