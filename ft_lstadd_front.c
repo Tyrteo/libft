@@ -6,7 +6,7 @@
 /*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 21:38:54 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/14 22:00:10 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/14 22:08:20 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-#include <stdio.h>
+/* #include <stdio.h>
 
 int main(void)
 {
@@ -38,4 +38,4 @@ int main(void)
 
 	free(n1);
 	free(n2);
-}
+} */
