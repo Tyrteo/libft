@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*src2nd;
 	size_t			i;
 
+	if (!dst && !src)
+		return (NULL);
 	dst2nd = (unsigned char *)dst;
 	src2nd = (unsigned char *)src;
 	i = 0;
@@ -44,4 +46,4 @@ int	main(void)
 	printf("target1 (after ft_memcpy) = %s\n", target1);
 	printf("target2 (after ft_memcpy) = %s\n", target2);
 }
-		*/
+*/

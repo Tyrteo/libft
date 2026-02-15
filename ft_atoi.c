@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 18:49:11 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/12 19:35:17 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/15 18:29:05 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	while (ft_isspace(str[i]))
 		i++;
-	if (str[i] == '+' && str[i] != '-')
+	if (str[i] == '+' && str[i +1] != '-')
 		i++;
 	if (str[i] == '-')
 	{

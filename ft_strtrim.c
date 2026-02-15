@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 14:07:52 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/13 15:08:10 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/15 19:11:06 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 
 //esta comprueba si un carácter está en el set. 1 sí, 0 no.
-int	to_trim(const char *set, char c)
+static int	to_trim(const char *set, char c)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ int	to_trim(const char *set, char c)
 	return (0);
 }
 
-char	*trimmed_str(const char *s1, size_t start, size_t len)
+static char	*trimmed_str(const char *s1, size_t start, size_t len)
 {
 	char	*str;
 	size_t	i;
@@ -54,6 +54,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	j;
 
 	i = 0;
+	if (!s1 || !set)
+		return (NULL);
 	j = ft_strlen(s1) - 1;
 	if (ft_strlen(s1) == 0)
 		return (ft_strdup(""));
