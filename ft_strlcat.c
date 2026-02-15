@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 18:01:31 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/10 19:25:51 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/15 17:03:27 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,12 @@ int main(void)
     char dest2[10] = "Hola";
     char *src2 = " Estudiante de 42";
     size_t res2 = ft_strlcat(dest2, src2, 10);
-    printf("Test 2 - Truncado (Size 10):\n Result: %zu, Dest: %s\n\n", res2, dest2);
+    printf("Test 2 - Truncado:\n Result: %zu, Dest: %s\n\n", res2, dest2);
 
     // 3. Caso límite: dstsize es igual a la longitud de dst
     char dest3[10] = "Hola";
     size_t res3 = ft_strlcat(dest3, "...", 4);
-    printf("Test 3 - dstsize igual a strlen(dst):\n Result: %zu, Dest: %s\n\n", res3, dest3);
+    printf("Test dstsize = strlen(dst):\n Result: %zu, Dest: %s\n", res3, dest3);
 
     return 0;
 } */

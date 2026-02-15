@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 17:17:51 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/11 17:27:44 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/15 17:04:32 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 		last_position_found = (char *) &s[i];
 	return (last_position_found);
 }
-
+/* 
 // 30 Porque el el while no entra en la última posición y hay
 // que comprobar si el char buscado es el '/0'
 
@@ -50,4 +50,4 @@ int main(void)
 		printf("Encontrado\n");
 	else
 		printf("No se encuentra %c en la cadena.\n", buscar);
-}
+} */

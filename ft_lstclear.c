@@ -6,7 +6,7 @@
 /*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 12:23:07 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/15 13:15:03 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/15 16:56:32 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
-	*lst= NULL;
+	*lst = NULL;
 }
 /* 
 #include <stdio.h>

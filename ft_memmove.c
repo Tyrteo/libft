@@ -6,7 +6,7 @@
 /*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:43:25 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/01 20:02:12 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/15 17:04:55 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		{
 			len--;
 			tdst[len] = tsrc[len];
-
 		}
 	}
 	else
