@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 19:56:12 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/15 19:31:36 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 13:24:23 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,35 +71,46 @@ static char	*fill_word(const char *str, int start, int end)
 	word[i] = 0;
 	return (word);
 }
+/* no encontrafa forma de encajarlo todo en 25 líneas, así que el
+array se llena en esta abominación */
 
-char	**ft_split(const char *s, char c)
+static char	**split_logic(char **res, const char *s, char c)
 {
-	char	**res;
 	size_t	i;
 	int		j;
-	int		wordstart;
+	int		start;
 
 	i = 0;
 	j = 0;
-	wordstart = -1;
-	res = ft_calloc((word_count(s, c) + 1), sizeof(char *));
-	if (!res)
-		return (NULL);
+	start = -1;
 	while (i <= ft_strlen(s))
 	{
-		if (s[i] != c && wordstart < 0)
-			wordstart = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && wordstart >= 0)
+		if (s[i] != c && start < 0 && s[i])
+			start = i;
+		else if ((s[i] == c || s[i] == '\0') && start >= 0)
 		{
-			res[j] = fill_word(s, wordstart, i);
-			if (!(res[j++]))
+			res[j] = fill_word(s, start, i);
+			if (!res[j++])
 				return (ft_free(res, j - 1));
-			wordstart = -1;
+			start = -1;
 		}
 		i++;
 	}
 	return (res);
 }
+
+char	**ft_split(const char *s, char c)
+{
+	char	**res;
+
+	if (!s)
+		return (NULL);
+	res = ft_calloc(word_count(s, c) + 1, sizeof(char *));
+	if (!res)
+		return (NULL);
+	return (split_logic(res, s, c));
+}
+
 /* 
 #include <stdio.h>
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 18:01:31 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/15 17:03:27 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/19 13:59:46 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,53 +15,50 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	src_length;
-	size_t	dst_length;
+	size_t	src_len;
+	size_t	dst_len;
+	size_t	i;
+	size_t	j;
 
-	src_length = ft_strlen(src);
-	dst_length = ft_strlen(dst);
-	if (dst_length > dstsize)
-		dst_length = dstsize;
-	if (dst_length == dstsize)
-		return (dstsize + src_length);
-	if (src_length < dstsize - dst_length)
-		ft_memcpy(dst + dst_length, src, src_length + 1);
-	else
+	src_len = ft_strlen(src);
+	if (dstsize == 0 && !dst)
+		return (src_len);
+	dst_len = ft_strlen(dst);
+	if (dstsize <= dst_len)
+		return (src_len + dstsize);
+	i = dst_len;
+	j = 0;
+	while (src[j] && (i + 1) < dstsize)
 	{
-		ft_memcpy(dst + dst_length, src, dstsize - dst_length - 1);
-		dst[dstsize - 1] = 0;
+		dst[i] = src[j];
+		i++;
+		j++;
 	}
-	return (dst_length + src_length);
+	dst[i] = '\0';
+	return (dst_len + src_len);
 }
-// 24 si el tamaño del objetivo es el mismo (o mayor) no habría que añadir nada
-// porque ya tiene el número máximo de caracteres. return interrumpe
-
-// 27 ahora sí, si hay suficiente sitio en dst para que src quepa, añadimos
-// 28 con +N incremento la posición de inicio de lectura y escritura
-
-// Cómo testeo esto sin malloc?
 
 /* #include <stdio.h>
 #include <string.h>
 
 int main(void)
 {
-    // 1. Caso normal: Hay espacio suficiente
-    char dest1[20] = "Hola";
-    char *src1 = " Mundo";
-    size_t res1 = ft_strlcat(dest1, src1, 20);
-    printf("Test 1 - Buffer grande:\n Result: %zu, Dest: %s\n\n", res1, dest1);
+	// 1. Caso normal: Hay espacio suficiente
+	char dest1[20] = "Hola";
+	char *src1 = " Mundo";
+	size_t res1 = ft_strlcat(dest1, src1, 20);
+	printf("Test 1 - Buffer grande:\n Result: %zu, Dest: %s\n\n", res1, dest1);
 
-    // 2. Caso de truncado: El buffer es pequeño
-    char dest2[10] = "Hola";
-    char *src2 = " Estudiante de 42";
-    size_t res2 = ft_strlcat(dest2, src2, 10);
-    printf("Test 2 - Truncado:\n Result: %zu, Dest: %s\n\n", res2, dest2);
+	// 2. Caso de truncado: El buffer es pequeño
+	char dest2[10] = "Hola";
+	char *src2 = " Estudiante de 42";
+	size_t res2 = ft_strlcat(dest2, src2, 10);
+	printf("Test 2 - Truncado:\n Result: %zu, Dest: %s\n\n", res2, dest2);
 
-    // 3. Caso límite: dstsize es igual a la longitud de dst
-    char dest3[10] = "Hola";
-    size_t res3 = ft_strlcat(dest3, "...", 4);
-    printf("Test dstsize = strlen(dst):\n Result: %zu, Dest: %s\n", res3, dest3);
+	// 3. Caso límite: dstsize es igual a la longitud de dst
+	char dest3[10] = "Hola";
+	size_t res3 = ft_strlcat(dest3, "...", 4);
+	printf("Test dstsize = strlen(dst):\n Result: %zu, Dest: %s\n", res3, dest3);
 
-    return 0;
+	return 0;
 } */

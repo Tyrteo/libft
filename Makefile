@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+         #
+#    By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/15 17:11:30 by martrod2          #+#    #+#              #
-#    Updated: 2026/02/15 17:45:26 by martrod2         ###   ########.fr        #
+#    Updated: 2026/02/20 13:49:02 by martrod2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,8 @@ OBJS = $(SRC:%.c=%.o)
 
 all: $(NAME)
 
+bonus: all
+
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "$(NAME) has been created"
@@ -81,4 +83,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRC) -shared -o libft.so
+
+.PHONY: all clean fclean re bonus
