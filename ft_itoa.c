@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 12:29:34 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/14 13:25:40 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 18:11:38 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-// calcula cuánto espacio necesito en string para ese número
 static int	int_len(long longn)
 {
 	int	count;

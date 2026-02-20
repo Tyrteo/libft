@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 19:56:12 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/20 13:24:23 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 18:17:52 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
-
-// cuenta el número de palabras de un string
 
 static int	word_count(const char *str, char c)
 {
@@ -36,7 +32,6 @@ static int	word_count(const char *str, char c)
 	}
 	return (amount);
 }
-// libera todos los espacios que he reservado (unwind)
 
 static void	*ft_free(char **strs, int count)
 {
@@ -51,7 +46,6 @@ static void	*ft_free(char **strs, int count)
 	free(strs);
 	return (NULL);
 }
-// asigna espacio para palabra, la copia y retorna la palabra
 
 static char	*fill_word(const char *str, int start, int end)
 {
@@ -71,8 +65,6 @@ static char	*fill_word(const char *str, int start, int end)
 	word[i] = 0;
 	return (word);
 }
-/* no encontrafa forma de encajarlo todo en 25 líneas, así que el
-array se llena en esta abominación */
 
 static char	**split_logic(char **res, const char *s, char c)
 {

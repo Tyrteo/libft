@@ -6,11 +6,11 @@
 /*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:19:22 by martrod2          #+#    #+#             */
-/*   Updated: 2026/01/28 17:18:46 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 18:07:14 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 23:54:54 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/19 23:53:32 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 18:13:26 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,11 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	free(lst);
 }
 
-// *del no es más que el puntero a una función de limpieza que recibe 
-// un puntero y no devuelve nada. Hay que implementarla dependiendo del
-// contenido de lst. En el ejemplo uso palabras, entonces free()
-
-void	string_cleaner(void *contenido)
+/* void	string_cleaner(void *contenido)
 {
 	free(contenido);
 }
-/* 
+
 #include <stdlib.h>
 
 int	main(void)

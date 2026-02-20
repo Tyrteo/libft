@@ -6,11 +6,10 @@
 /*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 16:08:23 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/15 18:54:33 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 18:19:20 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

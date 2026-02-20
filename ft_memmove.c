@@ -6,12 +6,11 @@
 /*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:43:25 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/15 18:19:20 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 18:14:59 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

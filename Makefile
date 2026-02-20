@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+         #
+#    By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/15 17:11:30 by martrod2          #+#    #+#              #
-#    Updated: 2026/02/20 13:49:02 by martrod2         ###   ########.fr        #
+#    Updated: 2026/02/20 18:04:02 by martrod2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,8 +82,5 @@ fclean: clean
 	@echo "$(NAME) has been deleted"
 
 re: fclean all
-
-so:
-	$(CC) -fPIC $(CFLAGS) $(SRC) -shared -o libft.so
 
 .PHONY: all clean fclean re bonus

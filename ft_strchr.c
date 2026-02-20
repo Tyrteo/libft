@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martrod2 <martrod2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 13:46:01 by martrod2          #+#    #+#             */
-/*   Updated: 2026/02/11 17:27:39 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 18:18:30 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *) &s[i]);
 	return (NULL);
 }
-
-// 28 Porque el el while no entra en la última posición y hay
-// que comprobar si el char buscado es el '/0'
 
 /* #include <stdio.h>
 #include <string.h>

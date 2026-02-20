@@ -6,12 +6,11 @@
 /*   By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 19:14:20 by martrod2          #+#    #+#             */
-/*   Updated: 2026/01/28 17:06:12 by martrod2         ###   ########.fr       */
+/*   Updated: 2026/02/20 18:15:24 by martrod2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
