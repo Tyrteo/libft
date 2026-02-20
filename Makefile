@@ -6,7 +6,7 @@
 #    By: martrod2 <martrod2@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/15 17:11:30 by martrod2          #+#    #+#              #
-#    Updated: 2026/02/20 18:04:02 by martrod2         ###   ########.fr        #
+#    Updated: 2026/02/20 18:23:08 by martrod2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,8 +64,6 @@ OBJS = $(SRC:%.c=%.o)
 
 all: $(NAME)
 
-bonus: all
-
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "$(NAME) has been created"
@@ -83,4 +81,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
